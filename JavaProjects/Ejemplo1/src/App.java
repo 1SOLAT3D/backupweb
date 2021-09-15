@@ -8,12 +8,12 @@ public class App {
         System.out.println(a);
         System.out.println(b);
         int x = 1;
-        while (x<=c){
+        do{
             suma = a+b;
             System.out.println(suma);
             a = b;
             b = suma;
             x++;
-        }
+        }while (x<=c);
     }
 }
