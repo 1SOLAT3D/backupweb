@@ -16,11 +16,9 @@
 }
 
 .caja{
+    width: 150px;
+    height: 150px;
     background-color: gray;
     text-align: center;
     border: 1px solid blue;
-}
-
-#caja1{
-    grid-column: 1 / span 3;
 }
