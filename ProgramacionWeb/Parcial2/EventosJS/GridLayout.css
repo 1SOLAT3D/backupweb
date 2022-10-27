@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.contenedor {
+    width:100vw;
+    height:100vh;
+    background-color: blue;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 40% 40% 10%;
+    grid-template-areas : 'encabezado encabezado'
+                          'menulat columna1'
+                          'menulat columna2'
+                          'piepagina piepagina';
+}
+
+#caja1:hover{
+    background-color: red;
+    transition: width 2s ease-out;
+}
+
+#caja2:hover{
+    background-color: green;
+    transform: rotate(10deg);
+}
+#caja3:hover{
+    background-color: yellow;
+    transform: skew(10deg, 10deg);
+}
+#caja4:hover{
+    background-color: brown;
+    transform: scale(1.5);
+}
+
+.caja {
+    background-color:aqua;
+    text-align:center;
+    border: 1px solid red;
+}
+
+#caja1{grid-area: menulat;}
+#caja2{grid-area: encabezado;}
+#caja3{grid-area: columna1;}
+#caja4{grid-area: columna2;}
+#caja5{grid-area: piepagina;}

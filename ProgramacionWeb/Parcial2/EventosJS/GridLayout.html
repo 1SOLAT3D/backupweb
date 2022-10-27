@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="GridLayout.css">
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <button id="boton1" onclick="alert('Click Boton 1')">Boton 1</button>
+
+    <button id="boton2">Boton 2</button>
+    <button id="boton3">Boton 3</button>
+
+    <script>
+        /*
+        let elemento = document.getElementById("boton2");
+        elemento.onclick = function() {alert("Click Boton 2")};
+
+        document.querySelector('#boton3').AddEventListener("click",miFuncion1;)
+        function miFuncion1() {alert('Funcion Callback 1');}
+*/
+        $(document).ready(function(){
+            $('#boton2').click(function(){
+                alert("Click en boton 2")
+            });
+        })
+
+    </script>
+
+    <div class="contenedor">
+        <div id="caja1" class="caja">Caja 1</div>
+        <div id="caja2" class="caja">Caja 2</div>
+        <div id="caja3" class="caja">Caja 3</div>
+        <div id="caja4" class="caja">Caja 4</div>
+        <div id="caja5" class="caja">Caja 5</div>
+    </div>
+</body>
+</html>
