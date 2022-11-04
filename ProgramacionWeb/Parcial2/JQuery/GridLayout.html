@@ -15,19 +15,15 @@
     <button id="boton3">Boton 3</button>
 
     <script>
-        /*
-        let elemento = document.getElementById("boton2");
-        elemento.onclick = function() {alert("Click Boton 2")};
-
-        document.querySelector('#boton3').AddEventListener("click",miFuncion1;)
-        function miFuncion1() {alert('Funcion Callback 1');}
-*/
         $(document).ready(function(){
-            $('#caja1').click(function(){
-                alert("Click en la cajita 1")
+            $('#boton2').click(function(){
+                alert("Click en el boton 2")
             });
         })
 
+        document.getElementById("boton3").addEventListener("click", function() {
+            alert("Click en boton 3")
+        });
     </script>
 
     <div class="contenedor">
