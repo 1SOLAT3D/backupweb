@@ -10,11 +10,19 @@
     <button id="btnPeticion">Peticion</button>
     <div id="pokemon"></div>
     <script>
-        document.getElementById("btnPeticion").addEventListener("click", function() {
-            fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-            .then(respuesta => respuesta.text())
-            .then((datoJson) => console.log(datoJson));
-        });
+        fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+  .then(respuesta => {
+    if (respuesta.ok)
+      return respuesta.text()
+    else
+      throw new Error(respuesta.status);
+  })
+  .then(datos => {
+    console.log("Datos: " + datos);
+  })
+  .catch(err => {
+    console.error("ERROR: ", err.message)
+  });
     </script>
 </body>
 </html>
