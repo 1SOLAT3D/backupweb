@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnPeticion">Peticion</button>
+    <div id="pokemon"></div>
+    <script>
+        const request = async ("https://pokeapi.co/api/v2/pokemon/ditto"); => {
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+  if (!response.ok)
+    throw new Error("WARN", response.status);
+  const data = await response.text();
+  return data;
+}
+const resultOk = await request("/pokemon.txt");
+const resultError = await request("/Inexistente.txt");
+    </script>
+</body>
+</html>
