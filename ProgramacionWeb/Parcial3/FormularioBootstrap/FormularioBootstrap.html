@@ -99,20 +99,16 @@
   </div>
 </div>
 
-    <script>
+      <script>
       $(document).ready(function() {
                 $('#btn1').click(function() {
-                        $('.modal-body p').text('Se disparo modal con JQuery');
-                        $('#modal1').modal();
+                  $('.modal-body p').text('Se disparo modal con JQuery');
+                  $('#modal1').modal();
                 });
+             });
+            $('#liveToastBtn').click(function() {
+            $('.toast').toast('show');
             });
-</script>
-      <script>
-$(document).ready(function(){
-      $('#button').click(function() {
-  $('.toast').toast('show');
-});
-});
-</script>
+      </script>
 </body>
 <html>
