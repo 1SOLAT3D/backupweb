@@ -5,15 +5,17 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Formulario Bootstrap</title>
+      <script src="./jquery-3.6.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
+      <h1>Catalogo de Clientes</h1>
     <div class="container">
     <form class="form">
-
       <div class="row">
           <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                <label for="RFC" class="control-label">IRFC</label>
+                <label for="RFC" class="control-label">RFC</label>
                 <input id="RFC" type="text" class="form-control"/>
           </div>
           <div class="form-group col-sm-12 col-md-8 col-lg-9">
@@ -21,7 +23,6 @@
                 <input id="nombreCliente" type="text" class="form-control"/>
           </div>
       </div>
-eccion
       <div class="row">
           <div class="form-group col-sm-12 col-md-8 col-lg-6">
                 <label for="direccionCliente">Direccion</label>
@@ -32,8 +33,6 @@ eccion
                 <input id="telefonoCliente" type="text" class="form-control"/>
           </div>
       </div>
-
-
       <div class="row">
             <div class="form-group col-sm-12 col-md-6 col-lg-4">
                   <label for="ciudad">Ciudad</label>
@@ -49,6 +48,57 @@ eccion
             </div>
       </div>
       <button type="reset" class="btn btn-primary">Restablecer Campos</button>
+      <button id="btn1" type="button" class="btn btn-primary">Modal JQuery</button>
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
     </form>
+
+    <div id="modal1" class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>10 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+    <script>
+      $(document).ready(function() {
+                $('#btn1').click(function() {
+                        $('.modal-body p').text('Se disparo modal con JQuery');
+                        $('#modal1').modal();
+                });
+            });
+</script>
+      <script>
+$(document).ready(function(){
+      $('#button').click(function() {
+  $('.toast').toast('show');
+});
+});
+</script>
 </body>
 <html>
