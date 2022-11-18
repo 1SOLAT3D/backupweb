@@ -64,6 +64,7 @@
       <button type="reset" class="btn btn-primary">Restablecer Campos</button>
       <button id="btn1" type="button" class="btn btn-primary">Modal JQuery</button>
       <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
+      <button id="btnGet" type="button" class="btn btn-primary">GetRegistro</button>
     </form>
 
     <div id="modal1" class="modal" data-backdrop="static" data-keyboard="false" tabindex="-1">
@@ -109,6 +110,19 @@
             $('#liveToastBtn').click(function() {
             $('.toast').toast('show');
             });
+      </script>
+
+      <script>
+            document.getElementById("btnGet").addEventListener("click", async() =>{
+                 let respuesta = await fetch('GetRegistro.php');
+                 let dato = await respuesta.json()
+                 .then(dato => console.log(dato));
+            })
+
+            function refrescar(reg) {
+                  document.getElementById("RFC").value=reg.RFC;
+                  document.getElementById("nombreCliente").value=reg.nombreCliente;
+            }
       </script>
 </body>
 <html>
