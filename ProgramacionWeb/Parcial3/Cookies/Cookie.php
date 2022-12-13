@@ -11,7 +11,7 @@
 
         if(isset($_COOKIE['ultimaVisita']))
         {
-        printf("Su ultima vista fue : %s",$_COOKIE['ultimaVisita']);
+        printf("Su ultima vista fue : %s", $_COOKIE['ultimaVisita']);
         }
         else {
             $fechaHoy = date('Y/m/d H:i:s');
@@ -22,7 +22,7 @@
             echo '<b>Fecha de Creacion de Cookie: </b>' .$fechaHoy.'<br>';
             echo '<b>Fecha de Vencimiento de Cookie: </b>' .$fechaExpira.'<br>';
 
-            setcookie("ultimaVisita", $fechaHoy,time() + (7 * 24 * 60 * 60));
+            setcookie("ultimaVisita", $fechaHoy, time() + (7 * 24 * 60 * 60));
         }
     ?>
 </body>

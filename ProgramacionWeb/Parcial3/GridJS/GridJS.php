@@ -17,5 +17,4 @@ $result = mysqli_fetch_all($registros, MYSQLI_ASSOC);
 mysqli_close($con);
 echo json_encode($result);
 
-
 ?>

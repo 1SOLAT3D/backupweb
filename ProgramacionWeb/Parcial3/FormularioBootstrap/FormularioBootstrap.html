@@ -15,8 +15,8 @@
     <form class="form">
       <div class="row">
           <div class="form-group col-sm-12 col-md-4 col-lg-3">
-                <label for="RFC" class="control-label">RFC</label>
-                <input id="RFC" type="text" class="form-control"/>
+                <label for="id" class="control-label">ID</label>
+                <input id="id" type="text" class="form-control"/>
           </div>
           <div class="form-group col-sm-12 col-md-8 col-lg-9">
                 <label for="nombreCliente">Nombre</label>
@@ -63,7 +63,6 @@
       </div>
       <button type="reset" class="btn btn-primary">Restablecer Campos</button>
       <button id="btn1" type="button" class="btn btn-primary">Modal JQuery</button>
-      <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
       <button id="btnGet" type="button" class="btn btn-primary">GetRegistro</button>
     </form>
 
@@ -86,19 +85,6 @@
         </div>
       </div>
     </div>
-
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <strong class="me-auto">Bootstrap</strong>
-      <small>10 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
-</div>
 
       <script>
       $(document).ready(function() {
